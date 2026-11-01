@@ -1,0 +1,48 @@
+{
+  "name": "genpark-agentic-commerce-warehouse-slotting-cross-dock-flow-through-skill",
+  "version": "1.0.0",
+  "description": "Distribution center Cross-Dock flow-through staging, inbound-to-outbound trailer turnaround & dock door bottleneck reducer.",
+  "category": "agentic_commerce",
+  "author": "GenPark AI",
+  "website": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "main": "skills.py",
+  "tools": [
+    {
+      "name": "optimize_cross_dock_flow_through",
+      "description": "Distribution center Cross-Dock flow-through staging, inbound-to-outbound trailer turnaround & dock door bottleneck reducer.",
+      "sample_input": {
+        "inbound_pallets": [
+          {
+            "pallet_id": "PL-01",
+            "sku": "SKU-A",
+            "destination_order_code": "DEST-CHI",
+            "inbound_dock_door": "DOOR-02"
+          },
+          {
+            "pallet_id": "PL-02",
+            "sku": "SKU-B",
+            "destination_order_code": "DEST-LAX",
+            "inbound_dock_door": "DOOR-02"
+          },
+          {
+            "pallet_id": "PL-03",
+            "sku": "SKU-C",
+            "destination_order_code": "UNALLOCATED_STORAGE",
+            "inbound_dock_door": "DOOR-03"
+          }
+        ],
+        "outbound_shipments": [
+          {
+            "destination_code": "DEST-CHI",
+            "outbound_dock_door": "DOOR-24"
+          },
+          {
+            "destination_code": "DEST-LAX",
+            "outbound_dock_door": "DOOR-28"
+          }
+        ]
+      }
+    }
+  ]
+}
